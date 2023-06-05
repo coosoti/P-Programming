@@ -1,0 +1,7 @@
+Doctest for calculator module
+==============================
+
+Check: Import the function from the module
+	>>> add = __import__("calculator").add
+	>>> multiply = __import__("calculator").multiply
+
