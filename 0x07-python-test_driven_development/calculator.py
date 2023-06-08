@@ -1,8 +1,12 @@
 #!/usr/bin/python3
-
+"""This module contains functions add and multiply"""
 
 def add(x, y):
-    pass
+    """This function adds two integers
+
+    """
 
 def multiply(x, y):
-    pass
+    """This functions multiply two integers
+
+    """

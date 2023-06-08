@@ -1,0 +1,34 @@
+
+Check 1: Import functions
+	>>> add = __import__("main").add
+	>>> multiply = __import__("main").multiply
+
+Check 2: Check for module docs
+	>>> mod_docs = __import__("main").__doc__
+	>>> len(mod_docs) > 1
+	True
+
+Check 3: Check for functions docs
+	>>> add_docs = __import__("main").add.__doc__
+	>>> len(add_docs) > 1
+	True
+
+	>>> mult_docs = __import__("main").multiply.__doc__
+	>>> len(mult_docs) > 1
+	True
+
+Check 4: Check addition of two integers
+	>>> add(4, 9)
+	13
+
+Check 5: Check addition of floats
+	>>> add(4.0, 5.2)
+	9
+
+Check 6: Check addition of non-numbers, str and bool
+	>>> add("Six", 6)
+    	Traceback (most recent call last):
+		...
+   	TypeError: a must be an integer or a float
+	
+	

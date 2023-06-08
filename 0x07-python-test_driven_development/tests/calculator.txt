@@ -1,7 +1,20 @@
 Doctest for calculator module
 ==============================
 
-Check: Import the function from the module
+Check 1: Import the function from the module
 	>>> add = __import__("calculator").add
 	>>> multiply = __import__("calculator").multiply
 
+Check 2: Check for module docstring
+	>>> mod_doc = __import__("calculator").__doc__
+	>>> len(mod_doc) > 1
+	True
+
+Check 3: Check for functions docstrings
+	>>> add_doc = __import__("calculator").add.__doc__
+	>>> len(add_doc) > 1
+	True
+
+	>>> multiply_doc = __import__("calculator").multiply.__doc__
+	>>> len(multiply_doc) > 1
+	True
