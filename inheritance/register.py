@@ -20,7 +20,22 @@ class UserForm:
 
 
 class LearnerForm(UserForm):
-    pass
+    def __init__(self, name, email, password, confirm_password, program, scores):
+        # call the parent class constructor method using super()
+        super().__init__(name, email, password, confirm_password)
+        self.program = program
+        self.scores = scores
+
+    def validate_fields(self):
+        # call the validate_fields class method using super
+        validate = super().validate_fields()
+        if validate != "Form is successfully submitted":
+            return validate
+        if not self.program:
+            return "Please enter the program"
+        if not 0 <= self.scores <= 200:
+            return "Please enter valid scores"
+        return "Form is successfully submitted"
 
 class MentorForm(UserForm):
     pass
